@@ -37,6 +37,6 @@ func solution(_ s:String) -> [Int] {
     return ans
 }
 
-print(
-    solution("{{2},{2,1,3,4,5},{2,1},{2,1,3},{2,1,3,4}}")
-)
+//print(
+//    solution("{{2},{2,1,3,4,5},{2,1},{2,1,3},{2,1,3,4}}")
+//)
