@@ -1,8 +1,8 @@
 import Foundation
 
-func counting(_ d : Dictionary<String, Int>, _ sets :Set<String>) -> Int{
+func typeCounting(_ d : Dictionary<String, Int>, _ s :Set<String>) -> Int{
     var cnt = 0
-    for set in sets {
+    for set in s {
         if d[set] != 0{
             cnt += 1
         }
@@ -15,23 +15,20 @@ func solution(_ gems:[String]) -> [Int] {
     var ans :[Int] = []
     var dictionary :Dictionary<String, Int> = [:]
     
-    for s in gems{
-        if (!sets.contains(s)){
-            sets.insert(s)
-            dictionary[s] = 0
+    for gem in gems{
+        if (!sets.contains(gem)){
+            sets.insert(gem)
+            dictionary[gem] = 0
         }
     }
     
     var start: Int = 0, end: Int = 0
-    var count = sets.count
-    var gemCount = gems.count
+    let gemType = sets.count
+    let gemCount = gems.count
     var tuple: (Int, Int) = (0, gemCount)
     
-//    print(type(of : gems[start]))
-    
     while (end < gemCount) || (start < gemCount) {
-        var checkCnt = counting(dictionary, sets)
-        if ( checkCnt == count){
+        if (typeCounting(dictionary, sets) == gemType){
             if (end - start) < (tuple.1 - tuple.0) {
                 tuple.0 = start
                 tuple.1 = end
