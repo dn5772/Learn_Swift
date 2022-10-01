@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C921C3EC-EC3E-4DEE-959B-C8785ADF998F"
-            shouldBeEnabled = "No"
+            uuid = "B78B3C6D-CF55-433D-9818-52121404AC88"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Algorithm/main.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3"
-            endingLineNumber = "3"
-            landmarkName = "typeCounting(_:_:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B320E3F7-F185-4AA1-BA8B-2A8BF2E296E5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Algorithm/main.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "typeCounting(_:_:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "solution(_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

@@ -19,7 +19,7 @@ func solution(_ gems:[String]) -> [Int] {
     newGems.append("")
     
     for index in 0..<(newGems.count-1){
-        var gem = gems[index]
+        let gem = gems[index]
         if (!sets.contains(gem)){
             sets.insert(gem)
             dictionary[gem] = 0
@@ -29,31 +29,30 @@ func solution(_ gems:[String]) -> [Int] {
         }
     }
     
-    var start: Int = 0, end: Int = 0
+    var end: Int = 0
+    var i = 0
     let gemType = sets.count
     let gemCount = gems.count
     var tuple: (Int, Int) = (0, gemCount)
     
-    while (end < gemCount) || (start < gemCount) {
-        if (typeCounting(dictionary, sets) == gemType){
-            if (end - start) < (tuple.1 - tuple.0) {
+    dictionary[gems[0]] = dictionary[gems[0]]! + 1
+    
+    for start in indexs{
+        while (i < (indexs.count - 1)) && (typeCounting(dictionary, sets) != gemType){
+            i += 1
+            end = indexs[i]
+            dictionary[gems[end]] = dictionary[gems[end]]! + 1
+        }
+        if (typeCounting(dictionary, sets) == gemType) {
+            if (end - start) < (tuple.1 - tuple.0){
                 tuple.0 = start
                 tuple.1 = end
             }
-            dictionary[gems[start]] = dictionary[gems[start]]! - 1
-            start += 1
         }
-        else if end == gemCount {
-            dictionary[gems[start]] = dictionary[gems[start]]! - 1
-            start += 1
-        }
-        else {
-            dictionary[gems[end]] = dictionary[gems[end]]! + 1
-            end += 1
-        }
+        dictionary[gems[start]] = dictionary[gems[start]]! - 1
     }
     
-    return [tuple.0 + 1, tuple.1]
+    return [tuple.0 + 1, tuple.1 + 1]
 }
 
 print(solution(["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]))
