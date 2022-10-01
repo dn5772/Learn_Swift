@@ -12,13 +12,20 @@ func typeCounting(_ d : Dictionary<String, Int>, _ s :Set<String>) -> Int{
 
 func solution(_ gems:[String]) -> [Int] {
     var sets :Set<String> = []
-    var ans :[Int] = []
     var dictionary :Dictionary<String, Int> = [:]
+    var indexs :[Int] = []
     
-    for gem in gems{
+    var newGems = gems
+    newGems.append("")
+    
+    for index in 0..<(newGems.count-1){
+        var gem = gems[index]
         if (!sets.contains(gem)){
             sets.insert(gem)
             dictionary[gem] = 0
+        }
+        if gem != newGems[index+1]{
+            indexs.append(index)
         }
     }
     
@@ -46,10 +53,7 @@ func solution(_ gems:[String]) -> [Int] {
         }
     }
     
-    ans.append(tuple.0 + 1)
-    ans.append(tuple.1)
-    
-    return ans
+    return [tuple.0 + 1, tuple.1]
 }
 
 print(solution(["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]))
