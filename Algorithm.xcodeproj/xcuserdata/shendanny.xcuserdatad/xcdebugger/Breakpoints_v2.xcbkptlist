@@ -15,9 +15,55 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
-            endingLineNumber = "46"
+            endingLineNumber = "46">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01B6CAAE-A1ED-40C6-BC6C-7BC6D3DBF2BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Algorithm/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5"
+            endingLineNumber = "5"
             landmarkName = "solution(_:)"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "01B6CAAE-A1ED-40C6-BC6C-7BC6D3DBF2BF - db6dfe22252e56ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Algorithm.solution(Swift.Array&lt;Swift.Array&lt;Swift.String&gt;&gt;) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Algorithm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shendanny/Documents/CODING/Algorithm/Algorithm/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "01B6CAAE-A1ED-40C6-BC6C-7BC6D3DBF2BF - 40e84888818ced0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.String&gt;, Swift.Array&lt;Swift.String&gt;) -&gt; Swift.Bool in Algorithm.solution(Swift.Array&lt;Swift.Array&lt;Swift.String&gt;&gt;) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Algorithm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shendanny/Documents/CODING/Algorithm/Algorithm/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

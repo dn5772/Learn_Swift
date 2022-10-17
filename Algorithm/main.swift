@@ -1,37 +1,26 @@
 import Foundation
 
-
-func solution(_ gems:[String]) -> [Int] {
-    var dictionary :Dictionary<String, Int> = [:]
-    let sets = Set(gems)
+func solution(_ tickets:[[String]]) -> [String] {
+    var result: [String] = []
+    var sortedTickets = tickets.sorted(by: {(v1:[String], v2:[String])->Bool in
+        if v1[0] == v2[0]{return v1[1] < v2[1]}
+        return v1[0] < v2[0]
+    })
     
-    var end: Int = 0
-    let gemType = sets.count
-    let gemCount = gems.count
-    var tuple: (Int, Int) = (0, gemCount)
+    var lastCity: String = "ICN"
+    result.append(lastCity)
     
-    dictionary[gems[0], default: 0] += 1
-    for (start, gem) in gems.enumerated() {
-        while (end < gemCount-1) && (dictionary.count != gemType){
-            end += 1
-            dictionary[gems[end], default: 0] += 1
-        }
-    
-        if (dictionary.count == gemType) {
-            if (end - start) < (tuple.1 - tuple.0){
-                tuple.0 = start
-                tuple.1 = end
+    while !sortedTickets.isEmpty{
+        for (index, city) in sortedTickets.enumerated() {
+            if city[0] == lastCity{
+                result.append(city[1])
+                lastCity = city[1]
+                sortedTickets.remove(at: index)
+                break
             }
         }
-        
-        dictionary[gem, default: 0] -= 1
-        if dictionary[gem] == 0{
-            dictionary.removeValue(forKey: gem)
-        }
-        
     }
-    
-    return [tuple.0 + 1, tuple.1 + 1]
+    return result
 }
 
-print(solution(["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]))
+print(solution([["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]))
