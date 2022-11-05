@@ -80,4 +80,3 @@ func solution(_ stones:[Int], _ k:Int) -> Int {
 }
 
 print(solution([2, 4, 5, 9, 3, 2, 1, 4, 2, 5, 1], 3))
-
